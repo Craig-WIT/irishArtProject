@@ -8,6 +8,17 @@ export const accountsController = {
       return h.view("main", { title: "Welcome to the Irish Art Project" });
     },
   },
+  admin: {
+    auth: false,
+    handler: async function (request, h) {
+      const users = await db.userStore.getAllUsers();
+      const viewData = {
+        title: "Irish Art Project Admin",
+        users: users,
+      };
+      return h.view("admin-view", viewData);
+    },
+  },
   showSignup: {
     auth: false,
     handler: function (request, h) {
@@ -47,6 +58,9 @@ export const accountsController = {
     handler: async function (request, h) {
       const { email, password } = request.payload;
       const user = await db.userStore.getUserByEmail(email);
+      if (user.email === "admin@admin.com" && user.password === "Admin") {
+        return h.redirect("/admin");
+      }
       if (!user || user.password !== password) {
         return h.redirect("/");
       }
@@ -58,6 +72,14 @@ export const accountsController = {
     handler: function (request, h) {
       request.cookieAuth.clear();
       return h.redirect("/");
+    },
+  },
+  deleteUser: {
+    auth: false,
+    handler: async function (request, h) {
+      const user = await db.userStore.getUserById(request.params.id);
+      await db.userStore.deleteUserById(user._id);
+      return h.redirect("/admin");
     },
   },
 
