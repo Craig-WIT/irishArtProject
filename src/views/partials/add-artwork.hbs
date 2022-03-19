@@ -1,0 +1,35 @@
+<form class="box" action="/location/{{location._id}}/addartwork" method="POST">
+  <label>Enter Artwork Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Title" name="title">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Artist" name="artist">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Year" name="year">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Latitude" name="lat">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Longitude" name="lng">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Select Category" list="categories" name="category">
+          <datalist id="categories">
+            <option value="Mural">
+            <option value="Sculpture">
+            <option value="Graffiti">
+            <option value="Dublin Canvas Box">
+          </datalist>
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Description" name="description">
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Add Artwork</button>
+</form>

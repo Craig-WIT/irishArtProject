@@ -1,0 +1,45 @@
+{
+  "name": "playtime",
+  "version": "0.1.0",
+  "description": "Playtime: a Hapi/node application for managing Playlists",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "eslint . --ext .js",
+    "dev": "nodemon  src/server.js --ignore 'src/models/json/*.json'",
+    "test": "mocha --ui tdd test/**/*.js",
+    "testmodels": "mocha --ui tdd test/models/**/*.js",
+    "testapi": "mocha --ui tdd test/api/**/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.25.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "mocha": "^9.2.0",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "dotenv": "^15.0.0",
+    "handlebars": "^4.7.7",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-swagger": "^14.2.5",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "leaflet": "^1.7.1",
+    "lowdb": "^3.0.0",
+    "mais-mongoose-seeder": "^1.0.7",
+    "mongoose": "^6.2.0",
+    "uuid": "^8.3.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "artworks": [
+    {
+      "title": "Summer Tales",
+      "artist": "Shalom Chiaverini",
+      "year": 2020,
+      "category": "Dublin Canvas Box",
+      "description": "A description of the artwork",
+      "lat": 53.389391,
+      "lng": -6.264859,
+      "_id": "6b928668-1ca1-4c0b-8c3d-c12a1dd985fc",
+      "locationid": "d28354b7-72d3-4f27-80c3-633b6604bd68"
+    }
+  ]
+}

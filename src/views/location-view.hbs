@@ -1,0 +1,30 @@
+{{> menu}}
+
+<section class="section">
+  <div class="title">
+    {{location.name}}
+  </div>
+  {{> list-artworks}}
+  <div class="mapid" id="mapid"></div>
+  {{> add-artwork}}
+</section>
+
+<script src="../maps.js"></script>
+<script>
+  const mapMarkers = {
+    markers: [{{#each location.artworks}}
+      "Title: {{title}}<br>Artist: {{artist}}<br>Category: {{category}}<br>{{description}}",{{/each}}],
+    latitudes: [{{#each location.artworks}}
+      "{{lat}}",{{/each}}],
+    longitudes: [{{#each location.artworks}}
+      "{{lng}}",{{/each}}]
+  };
+
+  for (let i = 0; i < mapMarkers.markers.length; i++) {
+    marker = new L.marker([mapMarkers.latitudes[i], mapMarkers.longitudes[i]])
+      .bindPopup("<h1>Artwork</h1>" + mapMarkers.markers[i])
+      .addTo(mymap);
+  }
+
+</script>
+

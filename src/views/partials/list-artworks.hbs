@@ -1,0 +1,39 @@
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Artwork</th>
+      <th>Artist</th>
+      <th>Year</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Delete</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each location.artworks}}
+      <tr>
+        <td>
+          {{title}}
+        </td>
+        <td>
+          {{artist}}
+        </td>
+        <td>
+          {{year}}
+        </td>
+        <td>
+          {{category}}
+        </td>
+        <td>
+          {{description}}
+        </td>
+        <td>
+          <a href="/location/{{../location._id}}/deleteartwork/{{_id}}" class="ui icon button">
+            <i class="fas fa-eraser"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
