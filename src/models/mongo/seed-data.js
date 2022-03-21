@@ -63,5 +63,95 @@ export const seedData = {
       lng: -6.24068775933172,
       locationid: "->locations.Dublin"
     },
+    artwork_3 : {
+      title: "Scarlet for your Ma'",
+      artist: "Holly Pereira",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.336328,
+      lng: -6.273231,
+      locationid: "->locations.Dublin"
+    },
+    artwork_4 : {
+      title: "Heavy Sea of Love'",
+      artist: "Learning Man",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.32541,
+      lng: 6.265248,
+      locationid: "->locations.Dublin"
+    },
+    artwork_5 : {
+      title: "One More Square'",
+      artist: "Craig Grehan",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.389442,
+      lng: -6.197706,
+      locationid: "->locations.Dublin"
+    },
+    artwork_6 : {
+      title: "Monday'",
+      artist: "Fuchsia MacAree",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.330651,
+      lng: -6.264423,
+      locationid: "->locations.Dublin"
+    },
+    artwork_7 : {
+      title: "An Taisce'",
+      artist: "Caroline McKeon",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.389924,
+      lng: -6.193115,
+      locationid: "->locations.Dublin"
+    },
+    artwork_8 : {
+      title: "Gra don Teanga'",
+      artist: "Jody Garry",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.350240259153885,
+      lng: -6.24068775933172,
+      locationid: "->locations.Dublin"
+    },
+    artwork_9 : {
+      title: "Heart/Hand Grenade'",
+      artist: "Lisa McHugh",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.358143,
+      lng: -6.35647,
+      locationid: "->locations.Dublin"
+    },
+    artwork_10 : {
+      title: "Bike it - Like It'",
+      artist: "Anna Entrambasaguas",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.345867,
+      lng: -6.254764,
+      locationid: "->locations.Dublin"
+    },
+    artwork_11 : {
+      title: "Tower Island'",
+      artist: "John Tynan",
+      year: 2021,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.320357,
+      lng: -6.394689,
+      locationid: "->locations.Dublin"
+    },
   }
 };
