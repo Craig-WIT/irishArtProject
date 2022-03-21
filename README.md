@@ -1,4 +1,4 @@
-# irishArtProject
+# Irish Art Project
 
 The Irish Art Project aims to create a collection of the Artworks dotted around Irish towns and cities.
 
