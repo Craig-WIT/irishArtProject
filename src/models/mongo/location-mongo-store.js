@@ -39,5 +39,12 @@ export const locationMongoStore = {
 
   async deleteAllLocations() {
     await Location.deleteMany({});
-  }
+  },
+
+  async updateLocation(updatedLocation) {
+    const location = await Location.findOne({ _id: updatedLocation._id });
+    location.name = updatedLocation.name;
+    location.img = updatedLocation.img;
+    await location.save();
+  },
 };

@@ -22,6 +22,7 @@ export const webRoutes = [
   { method: "GET", path: "/location/{id}", config: locationController.index },
   { method: "POST", path: "/location/{id}/addartwork", config: locationController.addArtwork },
   { method: "GET", path: "/location/{id}/deleteartwork/{artworkid}", config: locationController.deleteArtwork },
+  { method: "POST", path: "/location/{id}/uploadimage", config: locationController.uploadImage },
 
   { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } },
 ];

@@ -32,12 +32,14 @@ export const seedData = {
       name: "Dublin City",
       lat: 53.3498,
       lng: -6.265503,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647903473/DublinHotel_zpnvcs.jpg",
       userid: "->users.bart"
     },
     Waterford: {
       name: "Waterford City",
       lat: 52.2593,
       lng: -7.11097,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647901506/cat_hvlacx.jpg",
       userid: "->users.bart"
     }
   },

@@ -1,12 +1,18 @@
 {{> menu}}
 
-<section class="section">
-  <div class="title">
-    {{location.name}}
+<section class="section columns is-vcentered">
+  <div class="title column has-text-centered">
+      {{location.name}}
   </div>
+    <div class="column">
+    {{> location-image }}
+    </div>
+</section>
+<div class="box box-link-hover-shadow">
   {{> list-artworks}}
   <div class="mapid" id="mapid"></div>
   {{> add-artwork}}
+</div>
 </section>
 
 <script>

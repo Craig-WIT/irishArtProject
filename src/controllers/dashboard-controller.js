@@ -38,6 +38,7 @@ export const dashboardController = {
         name: request.payload.name,
         lat: request.payload.lat,
         lng: request.payload.lng,
+        img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg"
       };
       await db.locationStore.addLocation(newLocation);
       return h.redirect("/dashboard");
