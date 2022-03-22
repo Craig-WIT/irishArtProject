@@ -32,7 +32,7 @@ export const seedData = {
       name: "Dublin City",
       lat: 53.3498,
       lng: -6.265503,
-      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647903473/DublinHotel_zpnvcs.jpg",
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647980988/DublinHotel_zpnvcs_xtshou.jpg",
       userid: "->users.bart"
     },
     Waterford: {
@@ -40,6 +40,13 @@ export const seedData = {
       lat: 52.2593,
       lng: -7.11097,
       img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647901506/cat_hvlacx.jpg",
+      userid: "->users.bart"
+    },
+    Cork: {
+      name: "Cork City",
+      lat: 51.897775,
+      lng: -8.472671,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647988375/Cork_zh8zf9.jpg",
       userid: "->users.bart"
     }
   },
@@ -53,6 +60,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.389391,
       lng: -6.264859,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_2 : {
@@ -63,6 +71,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.350240259153885,
       lng: -6.24068775933172,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647987395/lukeKelly_t1tjiv.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_3 : {
@@ -73,6 +82,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.336328,
       lng: -6.273231,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_4 : {
@@ -82,7 +92,8 @@ export const seedData = {
       category: "Dublin Canvas Box",
       description: "A description of the artwork",
       lat: 53.32541,
-      lng: 6.265248,
+      lng: -6.265248,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_5 : {
@@ -93,6 +104,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.389442,
       lng: -6.197706,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647985673/onemoresquare_jtbjjn.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_6 : {
@@ -103,6 +115,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.330651,
       lng: -6.264423,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_7 : {
@@ -113,6 +126,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.389924,
       lng: -6.193115,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_8 : {
@@ -121,8 +135,9 @@ export const seedData = {
       year: 2021,
       category: "Dublin Canvas Box",
       description: "A description of the artwork",
-      lat: 53.350240259153885,
-      lng: -6.24068775933172,
+      lat: 53.320357,
+      lng: -6.394689,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_9 : {
@@ -133,6 +148,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.358143,
       lng: -6.35647,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_10 : {
@@ -143,6 +159,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.345867,
       lng: -6.254764,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_11 : {
@@ -153,6 +170,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.320357,
       lng: -6.394689,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
       locationid: "->locations.Dublin"
     },
   }

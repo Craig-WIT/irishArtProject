@@ -38,6 +38,7 @@ export const locationController = {
         description: request.payload.description,
         lat: request.payload.lat,
         lng: request.payload.lng,
+        img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg"
       };
       await db.artworkStore.addArtwork(location._id, newArtwork);
       return h.redirect(`/location/${location._id}`);

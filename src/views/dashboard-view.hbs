@@ -1,7 +1,13 @@
 {{> menu active="dashboard"}}
 
 <section class="section">
+  <div class="container">
+  <div class="columns is-4 is-variable is-multiline">
   {{> list-locations}}
+  </div>
+  </div>
+</section>
+<section>
   <div class="mapid" id="mapid"></div>
   {{> add-location}}
 </section>

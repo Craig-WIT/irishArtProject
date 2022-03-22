@@ -10,6 +10,7 @@ const artworkSchema = new Schema({
   description: String,
   lat: Number,
   lng: Number,
+  img: String,
   locationid: {
     type: Schema.Types.ObjectId,
     ref: "Location",

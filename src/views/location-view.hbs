@@ -8,8 +8,14 @@
     {{> location-image }}
     </div>
 </section>
-<div class="box box-link-hover-shadow">
+<section class="section">
+  <div class="container">
+  <div class="columns is-4 is-variable is-multiline">
   {{> list-artworks}}
+  </div>
+  </div>
+</section>
+<section>
   <div class="mapid" id="mapid"></div>
   {{> add-artwork}}
 </div>
@@ -45,7 +51,7 @@ mymap.on("click", onMapClick);
 <script>
   const mapMarkers = {
     markers: [{{#each location.artworks}}
-      "Title: {{title}}<br>Artist: {{artist}}<br>Category: {{category}}<br>{{description}}",{{/each}}],
+      "Title: {{title}}<br>Artist: {{artist}}<br>Category: {{category}}<br>{{description}}<br><img src={{img}}>",{{/each}}],
     latitudes: [{{#each location.artworks}}
       "{{lat}}",{{/each}}],
     longitudes: [{{#each location.artworks}}

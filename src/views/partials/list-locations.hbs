@@ -1,15 +1,24 @@
 {{#each locations}}
-  <div class="box box-link-hover-shadow">
+  <div class="column is-one-quarter">
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-256x256">
+      <img id="cardStyle" src={{img}}>
+    </figure>
+  </div>
+  <div class="card-content has-text-centered">
     <h2 class="title">
       {{name}}
     </h2>
-    <a href="/location/{{_id}}" class="button">
-      <span class="icon is-small">
-        <i class="fas fa-paint-brush"></i>
-      </span>
+    <footer class="card-footer">
+    <a href="/location/{{_id}}" class="card-footer-item">
+        <p>Open <i class="fas fa-paint-brush"></i></p>
     </a>
-    <a href="/dashboard/deletelocation/{{_id}}" class="button">
-      <i class="fas fa-eraser"></i>
+    <a href="/dashboard/deletelocation/{{_id}}" class="card-footer-item">
+      <p>Delete <i class="fas fa-eraser"></i></p>
     </a>
+    </footer>
+  </div>
+  </div>
   </div>
 {{/each}}
