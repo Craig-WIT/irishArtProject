@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { Location } from "./location.js";
 import { artworkMongoStore } from "./artwork-mongo-store.js";
 
@@ -12,6 +13,7 @@ export const locationMongoStore = {
       const location = await Location.findOne({ _id: id }).lean();
       if (location) {
         location.artworks = await artworkMongoStore.getArtworksByLocationId(location._id);
+        location.artworks = _.sortBy(location.artworks, o => o.title)
       }
       return location;
     }
@@ -25,7 +27,8 @@ export const locationMongoStore = {
   },
 
   async getUserLocations(id) {
-    const locations = await Location.find({ userid: id }).lean();
+    let locations = await Location.find({ userid: id }).lean();
+    locations = _.sortBy(locations, o => o.name)
     return locations;
   },
 

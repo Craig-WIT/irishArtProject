@@ -36,8 +36,15 @@ export const accountsController = {
     },
     handler: async function (request, h) {
       const user = request.payload;
+      if (await db.userStore.getUserByEmail(user.email)){
+        const viewData = {
+          title: "Sign Up Fail",
+          message: "It looks like this email address is already registered!",
+        };
+        return h.view("signupfail-view", viewData);
+      }
       await db.userStore.addUser(user);
-      return h.redirect("/");
+      return h.redirect("/login");
     },
   },
   showLogin: {

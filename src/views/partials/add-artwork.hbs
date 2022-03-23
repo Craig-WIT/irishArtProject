@@ -12,10 +12,10 @@
         <input class="input" type="text" placeholder="Enter Year" name="year">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Latitude" name="lat">
+        <input class="input" type="number" placeholder="Enter Latitude" name="lat" min="-90" max="90" step=".000001">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Longitude" name="lng">
+        <input class="input" type="number" placeholder="Enter Longitude" name="lng" min="-180" max="180" step=".000001">
       </div>
       <div class="field">
         <input class="input" type="text" placeholder="Select Category" list="categories" name="category">
@@ -24,6 +24,7 @@
             <option value="Sculpture">
             <option value="Graffiti">
             <option value="Dublin Canvas Box">
+            <option value="Waterford Walls">
           </datalist>
       </div>
       <div class="field">
