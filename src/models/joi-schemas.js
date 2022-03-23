@@ -30,6 +30,7 @@ export const ArtworkSpec = Joi.object()
     description: Joi.string().max(100).required().example("A description of the artwork"),
     lat: Joi.number().required().example("53.3498"),
     lng: Joi.number().required().example("-6.2603"),
+    img: Joi.string().required(),
     locationid: IdSpec,
   })
   .label("Artwork");
@@ -46,6 +47,7 @@ export const LocationSpec = Joi.object()
     name: Joi.string().required().example("Dublin"),
     lat: Joi.number().required().example("53.3498"),
     lng: Joi.number().required().example("-6.2603"),
+    img: Joi.string().optional(),
     userid: IdSpec,
     artworks: ArtworkArraySpec,
   })
