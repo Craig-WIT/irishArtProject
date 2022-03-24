@@ -1,11 +1,20 @@
 import { db } from "../models/db.js";
-import { LocationSpec, } from "../models/joi-schemas.js";
+import { LocationSpec } from "../models/joi-schemas.js";
+import { locationAnalytics } from "../utils/location-analytics.js";
 
 export const dashboardController = {
   index: {
     handler: async function (request, h) {
       const loggedInUser = request.auth.credentials;
       const locations = await db.locationStore.getUserLocations(loggedInUser._id);
+
+      if (locations.length > 0) {
+        for (let i = 0; i < locations.length; i+= 1) {
+          // eslint-disable-next-line no-await-in-loop
+          await locationAnalytics.updateDetails(locations[i]);
+        }
+      };
+
       const viewData = {
         title: "Irish Art Project Dashboard",
         user: loggedInUser,

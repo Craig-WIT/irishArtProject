@@ -1,28 +1,33 @@
 {{#each location.artworks}}
 <div class="column is-one-quarter">
-<div class="card">
-  <div class="card-image">
-    <figure class="image is-256x256">
-      <img id="cardStyle" src={{img}}>
-    </figure>
-  </div>
-  <div id="cardContent" class="card-content has-text-centered">
-    <h2 class="title is-4">
-      {{title}}
-    </h2>
-    <h1 class"title is-6">
-    <p>{{artist}}</p>
-    <p>{{category}}</p>
-    <p>{{year}}</p>
-    <p>{{description}}</p>
-    <br>
-    </h1>
-    <footer class="card-footer">
-    <a href="/location/{{../location._id}}/deleteartwork/{{_id}}" class="card-footer-item">
-      <p>Delete <i class="fas fa-eraser"></i></p>
-    </a>
-    </footer>
-  </div>
-  </div>
-  </div>
+          <div class="card has-background-info-light">
+            <div class="card-header has-text-centered">
+                <p class="is-size-4">
+                    <b>{{title}}</b>
+                </p>
+  
+            </div>
+            <div class="card-image">
+                <figure class="image">
+                    <img id="cardStyle" src= {{img}}
+                        alt="Location image">
+                </figure>
+            </div>
+            <div class="card-content has-text-weight-semibold">
+                <p>{{artist}}</p>
+                <p>{{category}}</p>
+                <p>{{year}}</p>
+                <p>{{description}}</p>
+            </div>
+  
+            <div class="card-footer has-text-weight-semibold has-background-link-light">
+                <a href="" class="card-footer-item has-text-black has-background-success-light">
+                    Add Image
+                </a>
+                <a href="/location/{{../location._id}}/deleteartwork/{{_id}}" class="card-footer-item has-text-black has-background-danger-light">
+                    Delete
+                </a>
+            </div>
+        </div>
+</div>
 {{/each}}

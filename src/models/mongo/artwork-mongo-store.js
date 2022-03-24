@@ -18,6 +18,11 @@ export const artworkMongoStore = {
     return artworks;
   },
 
+  async getCountArtworksCategoryByLocationId(id,category) {
+    const artworks = await Artwork.find({ locationid: id, category: category }).lean();
+    return artworks.length;
+  },
+
   async getArtworkById(id) {
     if (id) {
       const artwork = await Artwork.findOne({ _id: id }).lean();

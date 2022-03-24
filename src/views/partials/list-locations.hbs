@@ -1,24 +1,34 @@
 {{#each locations}}
-  <div class="column is-one-quarter">
-<div class="card">
-  <div class="card-image">
-    <figure class="image is-256x256">
-      <img id="cardStyle" src={{img}}>
-    </figure>
-  </div>
-  <div class="card-content has-text-centered">
-    <h2 class="title">
-      {{name}}
-    </h2>
-    <footer class="card-footer">
-    <a href="/location/{{_id}}" class="card-footer-item">
-        <p>Open <i class="fas fa-paint-brush"></i></p>
-    </a>
-    <a href="/dashboard/deletelocation/{{_id}}" class="card-footer-item">
-      <p>Delete <i class="fas fa-eraser"></i></p>
-    </a>
-    </footer>
-  </div>
-  </div>
-  </div>
+<div class="column is-one-quarter">
+<div class="card has-background-info-light">
+            <div class="card-header">
+                <p class="is-size-3">
+                    <b>{{name}}</b>
+                </p>
+  
+            </div>
+            <div class="card-image">
+                <figure class="image">
+                    <img id="cardStyle" src= {{img}}
+                        alt="Location image">
+                </figure>
+            </div>
+            <div class="card-content is-size-6 has-text-weight-semibold">
+                <p>New Artwork: {{title}}</p>
+                <p>Category: {{category}}</p>
+                <p>Sculptures: {{sculptures}}</p>
+                <p>Murals: {{murals}}</p>
+                <p>Street Art: {{streetArt}}</p>
+            </div>
+  
+            <div class="card-footer has-text-weight-semibold has-background-link-light">
+                <a href="/location/{{_id}}" class="card-footer-item has-text-black has-background-success-light">
+                    Open
+                </a>
+                <a href="/dashboard/deletelocation/{{_id}}" class="card-footer-item has-text-black has-background-danger-light">
+                    Delete
+                </a>
+            </div>
+        </div>
+</div>
 {{/each}}

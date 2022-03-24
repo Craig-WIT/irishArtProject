@@ -30,7 +30,7 @@ export const ArtworkSpec = Joi.object()
     description: Joi.string().max(100).required().example("A description of the artwork"),
     lat: Joi.number().required().example("53.3498"),
     lng: Joi.number().required().example("-6.2603"),
-    img: Joi.string().required(),
+    img: Joi.string().optional(),
     locationid: IdSpec,
   })
   .label("Artwork");
