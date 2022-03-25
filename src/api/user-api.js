@@ -28,7 +28,6 @@ export const userApi = {
     response: { schema: JwtAuth, failAction: validationError },
   },
   
-
   find: {
     auth: {
       strategy: "jwt",
