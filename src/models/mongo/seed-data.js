@@ -75,7 +75,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.389391,
       lng: -6.264859,
-      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1648319765/Summer_tales_m4fu7u.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_2 : {
@@ -108,7 +108,7 @@ export const seedData = {
       description: "A description of the artwork",
       lat: 53.32541,
       lng: -6.265248,
-      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1648319866/Heavy_seas_vv4tcq.jpg",
       locationid: "->locations.Dublin"
     },
     artwork_5 : {
@@ -186,6 +186,17 @@ export const seedData = {
       lat: 53.320357,
       lng: -6.394689,
       img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647904016/placeholder_opkxn0.jpg",
+      locationid: "->locations.Dublin"
+    },
+    artwork_12 : {
+      title: "Happy Horse'",
+      artist: "Garreth Joyce",
+      year: 2017,
+      category: "Dublin Canvas Box",
+      description: "A description of the artwork",
+      lat: 53.339884,
+      lng: -6.278068,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1648320231/Happy_Horse_zm0ltl.jpg",
       locationid: "->locations.Dublin"
     },
   }
