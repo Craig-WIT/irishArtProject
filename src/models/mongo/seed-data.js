@@ -49,6 +49,20 @@ export const seedData = {
       lng: -8.472671,
       img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1647988375/Cork_zh8zf9.jpg",
       userid: "->users.bart"
+    },
+    Galway: {
+      name: "Galway City",
+      lat: 53.27427,
+      lng: -9.049091,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1648318856/Galway_hgjf5a.jpg",
+      userid: "->users.bart"
+    },
+    Limerick: {
+      name: "Limerick City",
+      lat: 52.661126,
+      lng: -8.629637,
+      img: "https://res.cloudinary.com/dtf6gxvaq/image/upload/v1648319230/Limerick_n4vxaf.jpg",
+      userid: "->users.bart"
     }
   },
   artworks: {
