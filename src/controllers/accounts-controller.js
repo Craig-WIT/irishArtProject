@@ -64,15 +64,21 @@ export const accountsController = {
     },
     handler: async function (request, h) {
       const { email, password } = request.payload;
-      const user = await db.userStore.getUserByEmail(email);
-      if (user.email === "admin@admin.com" && user.password === "Admin") {
-        return h.redirect("/admin");
+      try{
+        const user = await db.userStore.getUserByEmail(email);
+
+        if (user.email === "admin@admin.com" && user.password === "Admin") {
+          return h.redirect("/admin");
+        }
+        if (!user || user.password !== password) {
+          return h.redirect("/");
+        }
+        request.cookieAuth.set({ id: user._id });
+        return h.redirect("/dashboard");
       }
-      if (!user || user.password !== password) {
+      catch{
         return h.redirect("/");
       }
-      request.cookieAuth.set({ id: user._id });
-      return h.redirect("/dashboard");
     },
   },
   logout: {

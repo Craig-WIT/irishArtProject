@@ -35,7 +35,7 @@ const swaggerOptions = {
 
 async function init() {
   const server = Hapi.server({
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 4000,
   });
   const result = dotenv.config();
 if (result.error) {
