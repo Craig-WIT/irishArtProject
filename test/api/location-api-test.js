@@ -59,4 +59,11 @@ suite("Location API tests", () => {
       assert(error.response.data.message === "No Location with this id", "Incorrect Response Message");
     }
   });
+
+  test("get a users locations", async () => {
+      await playtimeService.createLocation(dublin);
+      dublin.userid = user._id;
+      const returnedLocations = await playtimeService.getUserLocations(user._id);
+      assertSubset(dublin, returnedLocations);
+  });
 });

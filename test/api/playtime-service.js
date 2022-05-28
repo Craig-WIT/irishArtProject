@@ -15,6 +15,11 @@ export const playtimeService = {
     return res.data;
   },
 
+  async getUserByEmail(email) {
+    const res = await axios.get(`${this.playtimeUrl}/api/userByEmail/${email}`);
+    return res.data;
+  },
+
   async getAllUsers() {
     const res = await axios.get(`${this.playtimeUrl}/api/users`);
     return res.data;
@@ -47,6 +52,11 @@ export const playtimeService = {
 
   async getLocation(id) {
     const res = await axios.get(`${this.playtimeUrl}/api/locations/${id}`);
+    return res.data;
+  },
+
+  async getUserLocations(id) {
+    const res = await axios.get(`${this.playtimeUrl}/api/locations/${id}/user`);
     return res.data;
   },
 

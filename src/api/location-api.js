@@ -2,6 +2,7 @@ import Boom from "@hapi/boom";
 import { IdSpec, LocationArraySpec, LocationSpec, LocationSpecPlus } from "../models/joi-schemas.js";
 import { db } from "../models/db.js";
 import { validationError } from "./logger.js";
+import { locationAnalytics } from "../utils/location-analytics.js";
 
 export const locationApi = {
   find: {
@@ -26,7 +27,7 @@ export const locationApi = {
     auth: {
       strategy: "jwt",
     },
-    async handler(request) {
+    async handler(request, h) {
       try {
         const location = await db.locationStore.getLocationById(request.params.id);
         if (!location) {
@@ -102,5 +103,28 @@ export const locationApi = {
     },
     tags: ["api"],
     description: "Delete all Locations",
+  },
+
+  userLocations: {
+    auth: {
+      strategy: "jwt",
+    },
+    handler: async function (request, h) {
+      try {
+        const locations = await db.locationStore.getUserLocations(request.params.id);
+        if (locations.length > 0) {
+        for (let i = 0; i < locations.length; i+= 1) {
+          // eslint-disable-next-line no-await-in-loop
+          await locationAnalytics.updateDetails(locations[i]);
+        }
+      };
+        return locations;
+      } catch (err) {
+        return Boom.serverUnavailable("Database Error");
+      }
+    },
+    tags: ["api"],
+    description: "Get User specific locations",
+    validate: { params: { id: IdSpec }, failAction: validationError },
   },
 };

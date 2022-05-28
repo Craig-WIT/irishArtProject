@@ -44,10 +44,10 @@ export const ArtworkArraySpec = Joi.array().items(ArtworkSpecPlus).label("Artwor
 
 export const LocationSpec = Joi.object()
   .keys({
-    name: Joi.string().required().example("Dublin").regex(/^[A-Z][a-z]{2,}$/),
+    name: Joi.string().required().example("Dublin"),
     lat: Joi.number().required().example("53.3498"),
     lng: Joi.number().required().example("-6.2603"),
-    img: Joi.string().optional(),
+    img: Joi.any().optional(),
     userid: IdSpec,
     artworks: ArtworkArraySpec,
   })

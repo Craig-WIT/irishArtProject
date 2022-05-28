@@ -22,8 +22,11 @@ export const userMongoStore = {
   },
 
   async getUserByEmail(email) {
+    if(email){
     const user = await User.findOne({ email: email }).lean();
     return user;
+  }
+  return null;
   },
 
   async deleteUserById(id) {
