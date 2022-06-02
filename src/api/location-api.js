@@ -127,4 +127,30 @@ export const locationApi = {
     description: "Get User specific locations",
     validate: { params: { id: IdSpec }, failAction: validationError },
   },
+
+  uploadImage: {
+    auth: {
+      strategy: "jwt",
+    },
+    handler: async function(request, h) {
+      try {
+        const location = await db.locationStore.getLocationById(request.params.id);
+        const file = request.payload.imagefile;
+        if (Object.keys(file).length > 0) {
+          const url = await imageStore.uploadImage(request.payload.imagefile);
+          location.img = url;
+          db.locationStore.updateLocation(location);
+        }
+        return h.response(file).code(201);
+      } catch (err) {
+        return Boom.serverUnavailable("Database Error");
+      }
+    },
+    payload: {
+      multipart: true,
+      output: "data",
+      maxBytes: 209715200,
+      parse: true
+    }
+  },
 };
