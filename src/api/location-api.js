@@ -135,7 +135,9 @@ export const locationApi = {
     handler: async function(request, h) {
       try {
         const location = await db.locationStore.getLocationById(request.params.id);
-        const file = request.payload.imagefile;
+        console.log(location);
+        const file = request.payload;
+        console.log(file);
         if (Object.keys(file).length > 0) {
           const url = await imageStore.uploadImage(request.payload.imagefile);
           location.img = url;
@@ -143,7 +145,7 @@ export const locationApi = {
         }
         return h.response(file).code(201);
       } catch (err) {
-        return Boom.serverUnavailable("Database Error");
+        return Boom.serverUnavailable("Image upload failed");
       }
     },
     payload: {
