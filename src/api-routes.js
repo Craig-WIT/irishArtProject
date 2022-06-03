@@ -12,6 +12,7 @@ export const apiRoutes = [
   { method: "GET", path: "/api/locations/{id}", config: locationApi.findOne },
   { method: "GET", path: "/api/locations/{id}/user", config: locationApi.userLocations },
   { method: "POST", path: "/api/locations", config: locationApi.create },
+  { method: "POST", path: "/api/locations/{id}/image", config: locationApi.uploadImage },
   { method: "DELETE", path: "/api/locations", config: locationApi.deleteAll },
   { method: "DELETE", path: "/api/locations/{id}", config: locationApi.deleteOne },
   { method: "GET", path: "/api/artworks", config: artworkApi.find },
