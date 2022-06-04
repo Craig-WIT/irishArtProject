@@ -136,14 +136,14 @@ export const locationApi = {
       try {
         const location = await db.locationStore.getLocationById(request.params.id);
         console.log(location);
-        const file = request.payload;
-        console.log(file);
-        if (Object.keys(file).length > 0) {
-          const url = await imageStore.uploadImage(request.payload);
-          location.img = url;
-          db.locationStore.updateLocation(location);
-        }
-        return h.response(file).code(201);
+        // const file = request.payload.image;
+        // console.log(file);
+        // if (Object.keys(file).length > 0) {
+          // const url = await imageStore.uploadImage(request.payload.image);
+          // location.img = url;
+          // db.locationStore.updateLocation(location);
+        // }
+        return h.response(location).code(201);
       } catch (err) {
         return Boom.serverUnavailable("Image upload failed");
       }
