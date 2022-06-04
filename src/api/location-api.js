@@ -139,7 +139,7 @@ export const locationApi = {
         const file = request.payload;
         console.log(file);
         if (Object.keys(file).length > 0) {
-          const url = await imageStore.uploadImage(request.payload.imagefile);
+          const url = await imageStore.uploadImage(request.payload);
           location.img = url;
           db.locationStore.updateLocation(location);
         }
